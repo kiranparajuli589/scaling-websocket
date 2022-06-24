@@ -7,3 +7,9 @@
 ### Usecases
 ### Example
 ### Pros & Cons
+
+## Scaling with Redis
+### HA-Proxy
+### Redis Server
+### State Management
+### Example
