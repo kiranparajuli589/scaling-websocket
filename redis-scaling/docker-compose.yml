@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  loadBalancer:
+    image: haproxy
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./haproxy:/usr/local/etc/haproxy
+
+  wsApp1:
+    image: wsapp
+    environment:
+      - APP_ID=1111
+
+  wsApp2:
+    image: wsapp
+    environment:
+      - APP_ID=2222
+
+  wsApp3:
+    image: wsapp
+    environment:
+      - APP_ID=3333
+
+  wsApp4:
+    image: wsapp
+    environment:
+      - APP_ID=4444
+
+  redis:
+    image: redis

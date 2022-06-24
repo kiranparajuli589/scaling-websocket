@@ -1,0 +1,13 @@
+{
+  "name": "redis-scaling",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "node index.js"
+  },
+  "dependencies": {
+    "redis": "^4.1.0",
+    "websocket": "^1.0.34"
+  }
+}

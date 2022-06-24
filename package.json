@@ -1,0 +1,12 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "node index.js",
+    "server-scaler": "node redis-scaling/index.js"
+  },
+  "dependencies": {
+    "redis": "^4.1.0",
+    "websocket": "^1.0.34"
+  }
+}
