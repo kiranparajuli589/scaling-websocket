@@ -1,32 +1,57 @@
 version: "3.9"
 
 services:
-  loadBalancer:
+  redis:
+    image: redis
+    restart: always
+    container_name: ws_redis
+
+  wsApp1:
+    image: wsapp
+    container_name: ws_app_1
+    restart: always
+    environment:
+      - APP_ID=1111
+    depends_on:
+      - redis
+
+  wsApp2:
+    image: wsapp
+    restart: always
+    container_name: ws_app_2
+    environment:
+      - APP_ID=2222
+    depends_on:
+      - redis
+
+  wsApp3:
+    image: wsapp
+    restart: always
+    container_name: ws_app_3
+    environment:
+      - APP_ID=3333
+    depends_on:
+      - redis
+
+  wsApp4:
+    image: wsapp
+    restart: always
+    container_name: ws_app_4
+    environment:
+      - APP_ID=4444
+    depends_on:
+      - redis
+
+  lb:
     image: haproxy
+    restart: always
+    container_name: ws_lb
     ports:
       - "8080:8080"
     volumes:
       - ./haproxy:/usr/local/etc/haproxy
-
-  wsApp1:
-    image: wsapp
-    environment:
-      - APP_ID=1111
-
-  wsApp2:
-    image: wsapp
-    environment:
-      - APP_ID=2222
-
-  wsApp3:
-    image: wsapp
-    environment:
-      - APP_ID=3333
-
-  wsApp4:
-    image: wsapp
-    environment:
-      - APP_ID=4444
-
-  redis:
-    image: redis
+    depends_on:
+      - wsApp1
+      - wsApp2
+      - wsApp3
+      - wsApp4

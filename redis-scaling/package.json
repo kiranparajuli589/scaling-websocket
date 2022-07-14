@@ -6,8 +6,9 @@
   "scripts": {
     "serve": "node index.js"
   },
+  "type": "module",
   "dependencies": {
-    "redis": "^4.1.0",
+    "redis": "^3.0.2",
     "websocket": "^1.0.34"
   }
 }
