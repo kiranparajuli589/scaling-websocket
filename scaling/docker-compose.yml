@@ -12,6 +12,8 @@ services:
     restart: always
     environment:
       - APP_ID=1111
+    volumes:
+      - ./index.js:/home/node/app/index.js
     depends_on:
       - redis
 
@@ -21,6 +23,8 @@ services:
     container_name: ws_app_2
     environment:
       - APP_ID=2222
+    volumes:
+      - ./index.js:/home/node/app/index.js
     depends_on:
       - redis
 
@@ -30,6 +34,8 @@ services:
     container_name: ws_app_3
     environment:
       - APP_ID=3333
+    volumes:
+      - ./index.js:/home/node/app/index.js
     depends_on:
       - redis
 
@@ -39,6 +45,8 @@ services:
     container_name: ws_app_4
     environment:
       - APP_ID=4444
+    volumes:
+      - ./index.js:/home/node/app/index.js
     depends_on:
       - redis
 

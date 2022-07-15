@@ -1,0 +1,17 @@
+{
+  "name": "scaling",
+  "description": "Scaling websocket server with redis and HA Proxy Load Balancer",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node index.js",
+    "watch": "nodemon index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "redis": "^3.0.2",
+    "websocket": "^1.0.34"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

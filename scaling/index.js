@@ -68,14 +68,14 @@ websocket.on("request", request => {
   })
 
   // periodically send a message to the client
-  setInterval(() => {
-    connection.send(`Hello client. I am Server ${APP_ID}`)
-  }, 5000)
+  // setInterval(() => {
+  //   connection.send(`Hello client. I am Server ${APP_ID}`)
+  // }, 5000)
 
   // periodicall publish a message to the redis channel
-  setInterval(() => {
-    publisher.publish(CHANNEL_LIVE_CHAT, `Hello client. I am Server ${APP_ID}`)
-  }, 5000)
+  // setInterval(() => {
+  //   publisher.publish(CHANNEL_LIVE_CHAT, `Hello client. I am Server ${APP_ID}`)
+  // }, 5000)
 
 
   connections.push(connection)
