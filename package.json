@@ -1,12 +1,19 @@
 {
-  "name": "websocket",
+  "name": "redis-scaling",
   "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
     "serve": "node index.js",
-    "server-scaler": "node redis-scaling/index.js"
+    "lint": "eslint --ext .js,.cjs,.mjs index.js scaling .eslintrc.cjs",
+    "lint:fix": "eslint --ext .js,.cjs,.mjs index.js scaling .eslintrc.cjs --fix"
   },
+  "type": "module",
   "dependencies": {
-    "redis": "^4.1.0",
+    "redis": "^3.0.2",
     "websocket": "^1.0.34"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0"
   }
 }

@@ -1,8 +1,10 @@
-const http = require("http")
-const WebSocketServer = require("websocket").server
+import http from "http"
+import ws from "websocket"
 
 let connection
+const WebSocketServer = ws.server
 
+// eslint-disable-next-line no-unused-vars
 const httpServer = http.createServer((req, res) => {
   console.log(`Hey, we've received a request: ${req.toString()}`)
 })
