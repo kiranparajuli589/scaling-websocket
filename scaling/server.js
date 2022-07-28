@@ -46,7 +46,7 @@ subscriber.subscribe(CHANNEL_LIVE_CHAT)
 const httpserver = http.createServer()
 
 // pass the httpserver object to the WebSocketServer library to do all the job
-// this class will override the req/res 
+// this class will override the req/res
 const websocket = new WebSocketServer({
   "httpServer": httpserver
 })
@@ -72,7 +72,7 @@ websocket.on("request", request => {
   //   connection.send(`Hello client. I am Server ${APP_ID}`)
   // }, 5000)
 
-  // periodicall publish a message to the redis channel
+  // periodically publish a message to the redis channel
   // setInterval(() => {
   //   publisher.publish(CHANNEL_LIVE_CHAT, `Hello client. I am Server ${APP_ID}`)
   // }, 5000)

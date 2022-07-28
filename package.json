@@ -4,9 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "serve": "node index.js",
-    "lint": "eslint --ext .js,.cjs,.mjs index.js scaling .eslintrc.cjs",
-    "lint:fix": "eslint --ext .js,.cjs,.mjs index.js scaling .eslintrc.cjs --fix"
+    "lint": "eslint --ext .js index.js scaling .eslintrc.cjs",
+    "lint:fix": "eslint --ext .js index.js scaling .eslintrc.cjs --fix"
   },
   "type": "module",
   "dependencies": {
